@@ -1,0 +1,23 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+option go_package = "./service_proto";
+
+service DemoService {
+  rpc GetSomeData(google.protobuf.Empty) returns (DemoReply) {}
+}
+
+enum SomeEnum {
+  ENUM_ZERO = 0;
+  ENUM_ONE = 1;
+}
+
+message SomeData {
+  string someTextData = 1;
+  SomeEnum someEnum = 2;
+}
+
+message DemoReply {
+  repeated SomeData data = 1;
+}
+
+
