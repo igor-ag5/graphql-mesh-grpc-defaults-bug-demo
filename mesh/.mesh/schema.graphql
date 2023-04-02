@@ -1,0 +1,32 @@
+schema {
+  query: Query
+}
+
+type Query {
+  DemoService_GetSomeData(input: google_protobuf_Empty_Input): DemoReply
+  DemoService_connectivityState(tryToConnect: Boolean): ConnectivityState
+}
+
+type DemoReply {
+  data: [SomeData]
+}
+
+type SomeData {
+  someTextData: String
+  someEnum: SomeEnum
+}
+
+enum SomeEnum {
+  ENUM_ZERO
+  ENUM_ONE
+}
+
+scalar google_protobuf_Empty_Input @specifiedBy(url: "http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf")
+
+enum ConnectivityState {
+  IDLE
+  CONNECTING
+  READY
+  TRANSIENT_FAILURE
+  SHUTDOWN
+}

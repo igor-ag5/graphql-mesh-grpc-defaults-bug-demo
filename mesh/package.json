@@ -1,0 +1,15 @@
+{
+  "name": "mesh",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start-mesh": "mesh dev",
+    "build-mesh": "mesh build"
+  },
+  "dependencies": {
+    "@graphql-mesh/cli": "^0.82.23",
+    "@graphql-mesh/graphql": "^0.34.6",
+    "@graphql-mesh/grpc": "^0.29.16",
+    "graphql": "^16.6.0"
+  }
+}

@@ -1,0 +1,11 @@
+sources:
+    - name: DemoService
+      handler:
+        grpc:
+          endpoint: localhost:9003
+          source:
+            load:
+              defaults: true
+            file: ../service_go/service_proto/demo_service.proto
+serve:
+  hostname: localhost 
