@@ -6,6 +6,6 @@ sources:
           source:
             load:
               defaults: true
-            file: ../service_go/service_proto/demo_service.proto
+            file: ../demo_service/service_proto/demo_service.proto
 serve:
   hostname: localhost 
